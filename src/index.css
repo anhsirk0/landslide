@@ -5,3 +5,7 @@
 .center {
   @apply flex items-center justify-center;
 }
+
+.option-btn {
+  @apply border-2 border-primary-content hover:border-primary-content shadow-none;
+}

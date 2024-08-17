@@ -9,3 +9,7 @@
 .option-btn {
   @apply border-2 border-primary-content hover:border-primary-content shadow-none;
 }
+
+.title {
+  @apply text-lg font-bold;
+}

@@ -9,7 +9,7 @@ import { themes } from "@/config";
 import { useTheme } from "@/hooks";
 
 const SelectTheme = () => {
-  const { applyTheme } = useTheme();
+  const { applyTheme } = useTheme(true);
   return (
     <Menu>
       <div className="dropdown dropdown-top dropdown-end">

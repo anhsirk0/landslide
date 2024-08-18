@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 
 function toPageTitle(title: string = ""): string {
   const sep: string = " • ";
-  return title + sep + "Landslide";
+  return title + sep + "Landslides";
 }
 
 const usePageTitle = (...args: Parameters<typeof toPageTitle>) => {

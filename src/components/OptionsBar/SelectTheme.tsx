@@ -12,7 +12,7 @@ const SelectTheme = () => {
       <div
         role="button"
         tabIndex={0}
-        className="btn btn-sm xxl:btn-md xxl:px-3 btn-primary option-btn"
+        className="btn btn-sm xxl:btn-md xxl:px-3 btn-primary option-btn xxl:text-xl"
       >
         Theme
         <IconColorSwatch />

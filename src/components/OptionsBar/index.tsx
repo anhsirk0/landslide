@@ -7,6 +7,7 @@ import { IconArrowDown } from "@tabler/icons-react";
 import { Link, useLocation } from "react-router-dom";
 
 import { cn } from "@/helpers";
+import { Logo } from "@/components";
 import SelectTheme from "./SelectTheme";
 
 const OptionsBar: FC = () => {
@@ -43,11 +44,19 @@ const OptionsBar: FC = () => {
                 to="/"
                 className="btn btn-sm xxl:btn-md btn-primary option-btn xxl:text-xl"
               >
-                {/* <Logo className="fill-primary" /> */}
+                <Logo className="fill-primary-content" />
                 Landslides
               </Link>
             </div>
-            <div className="navbar-end">
+            <div className="navbar-end space-x-4">
+              <a
+                href="https://github.com/anhsirk0/landslides"
+                target="_blank"
+                className="btn btn-sm xxl:btn-md btn-primary option-btn xxl:text-xl"
+              >
+                Source Code
+              </a>
+
               <SelectTheme />
             </div>
           </div>

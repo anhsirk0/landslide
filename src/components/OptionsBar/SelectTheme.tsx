@@ -17,7 +17,7 @@ const SelectTheme = () => {
         Theme
         <IconColorSwatch />
       </div>
-      <ul className="dropdown-content z-[1] flex flex-col gap-2 p-4 bg-accent rounded-box h-96 min-h-0 overflow-y-auto mb-4 w-52 shadow-xl">
+      <ul className="dropdown-content z-[1] flex flex-col gap-2 p-4 bg-accent rounded-box h-96 min-h-0 overflow-y-auto mb-4 w-56 shadow-xl">
         {themes.map((theme) => (
           <li
             key={theme}

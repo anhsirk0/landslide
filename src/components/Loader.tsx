@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { clsx } from "clsx";
+import { cn } from "@/helpers";
 
 export type Color =
   | "primary"
@@ -26,7 +26,7 @@ const classes = {
 
 const Loader: FC<LoaderProps> = ({ color = "primary", className }) => (
   <div
-    className={clsx(
+    className={cn(
       "loading loading-infinity xxl:loading-lg",
       classes[color],
       className,

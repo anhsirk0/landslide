@@ -4,8 +4,9 @@ import { FC, Fragment, useState, useEffect } from "react";
 import { IconArrowDown } from "@tabler/icons-react";
 
 // other imports
-import clsx from "clsx";
 import { Link, useLocation } from "react-router-dom";
+
+import { cn } from "@/helpers";
 import SelectTheme from "./SelectTheme";
 
 const OptionsBar: FC = () => {
@@ -20,7 +21,7 @@ const OptionsBar: FC = () => {
     <Fragment>
       <button
         onClick={() => setOpen(!open)}
-        className={clsx(
+        className={cn(
           "fixed rounded-btn bg-accent left-[50vw] h-10 w-10 rotate-45 transition-all ease-in-out duration-300 z-50 center",
           open ? "bottom-10" : "-bottom-6",
         )}
@@ -30,7 +31,7 @@ const OptionsBar: FC = () => {
         )}
       </button>
       <div
-        className={clsx(
+        className={cn(
           "transition-all ease-in-out duration-300 fixed w-screen bg-accent",
           open ? "bottom-0" : "-bottom-16",
         )}

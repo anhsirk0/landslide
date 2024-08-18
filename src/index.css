@@ -11,5 +11,9 @@
 }
 
 .title {
-  @apply text-lg font-bold;
+  @apply text-sm xl:text-base xxl:text-lg font-bold;
+}
+
+.resp-btn {
+  @apply btn-xs xl:btn-sm xxl:btn-md;
 }

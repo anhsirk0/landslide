@@ -1,15 +1,21 @@
-import { FC, Fragment, useState } from "react";
+import { FC, Fragment, useState, useEffect } from "react";
 
 // icons imports
 import { IconArrowDown } from "@tabler/icons-react";
 
 // other imports
 import clsx from "clsx";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import SelectTheme from "./SelectTheme";
 
 const OptionsBar: FC = () => {
   const [open, setOpen] = useState(false);
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.pathname === "/") setOpen(true);
+  }, [location]);
+
   return (
     <Fragment>
       <button
@@ -34,10 +40,10 @@ const OptionsBar: FC = () => {
             <div className="navbar-start">
               <Link
                 to="/"
-                className="btn btn-sm xxl:btn-md btn-primary option-btn 2xl:text-xl"
+                className="btn btn-sm xxl:btn-md btn-primary option-btn xxl:text-xl"
               >
                 {/* <Logo className="fill-primary" /> */}
-                Landslide
+                Landslides
               </Link>
             </div>
             <div className="navbar-end">

@@ -7,7 +7,9 @@ const Home = () => {
   usePageTitle("Home");
   return (
     <div className="center flex-col gap-8 h-full p-4 max-w-7xl">
-      <p className="text-5xl">Landslide - Collection of Landing pages</p>
+      <p className="text-5xl">
+        Landslides - Collection of Landing pages redesigned using DaisyUI
+      </p>
       <div className="grid grid-cols-12 gap-8">
         {appRoutes.map((route) => (
           <Link

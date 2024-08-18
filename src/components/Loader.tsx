@@ -27,7 +27,7 @@ const classes = {
 const Loader: FC<LoaderProps> = ({ color = "primary", className }) => (
   <div
     className={clsx(
-      "loading loading-infinity 2xl:loading-lg",
+      "loading loading-infinity xxl:loading-lg",
       classes[color],
       className,
     )}

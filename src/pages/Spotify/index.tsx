@@ -39,7 +39,10 @@ const Spotify = () => {
                     }
                     src={`https://picsum.photos/seed/${idx * 10}/300/300`}
                   />
-                  <p className="font-bold">Artist {idx + 1}</p>
+                  <p className="title">Artist {idx + 1}</p>
+                  <p className="text-xs xl:text-sm xxl:text-base -mt-2">
+                    {category}
+                  </p>
                 </div>
               ))}
             </div>

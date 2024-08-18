@@ -16,7 +16,7 @@ const Home = () => {
           <Link
             to={route.path}
             key={route.path + route.title}
-            className="col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-3"
+            className="col-span-12 md:col-span-6 xl:col-span-4 xxl:col-span-3 rounded-box overflow-hidden"
           >
             {route.Card ? <route.Card /> : <RouteCard route={route} />}
           </Link>

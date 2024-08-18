@@ -27,7 +27,7 @@ const SpotifySidebar = () => {
           </div>
           <IconPlus className="w-4 xxl:w-6" />
         </div>
-        <div className="card card-compact bg-base-300 mt-8 xxl:mt-16">
+        <div className="card card-compact bg-base-300 mt-6 xxl:mt-16">
           <div className="card-body">
             <p className="title">Create your first playlist</p>
             <p className="text-xs xl:text-sm xxl:text-base pb-4">
@@ -40,7 +40,7 @@ const SpotifySidebar = () => {
             </div>
           </div>
         </div>
-        <div className="card card-compact bg-base-300 mt-8">
+        <div className="card card-compact bg-base-300 mt-6 xxl:mt-8">
           <div className="card-body">
             <p className="title">Let's find some podcasts to follow</p>
             <p className="text-xs xl:text-sm xxl:text-base pb-4">
@@ -57,7 +57,7 @@ const SpotifySidebar = () => {
         <Links data={["Legal", "Safety & Privacy Center", "Privacy Policy"]} />
         <Links data={["About Ads", "Accessibility"]} />
         <Links data={["Cookies"]} />
-        <button className="btn resp-btn btn-outline w-fit my-4 xxl:my-8">
+        <button className="btn resp-btn btn-outline w-fit my-2 xxl:my-8">
           <IconWorld />
           English
         </button>

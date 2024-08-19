@@ -32,7 +32,7 @@ const Spotify = () => {
               {range(5).map((idx) => (
                 <div
                   key={idx}
-                  className="flex flex-col rounded-box p-2 hover:bg-base-300 transition-all ease-in-out duration-300 gap-2 group"
+                  className="flex flex-col rounded-box p-2 xxl:p-4 hover:bg-base-300 transition-all ease-in-out duration-300 gap-2 group"
                 >
                   <div className="relative">
                     <img

@@ -1,6 +1,7 @@
 import { usePageTitle } from "@/hooks";
-import NetflixLogo from "./NetflixLogo";
 import { range } from "@/helpers";
+import NetflixLogo from "./NetflixLogo";
+import NetflixReasons from "./NetflixReasons";
 
 const Netflix = () => {
   usePageTitle("Netflix");
@@ -46,7 +47,7 @@ const Netflix = () => {
         <div className="bg-gradient-to-b from-base-100 via-transparent border-t-4 border-primary rounded-t-[200%] absolute top-0 -left-[25%] w-[150%] h-full"></div>
       </div>
       <div className="flex flex-col pb-40 -mt-36 max-w-7xl mx-auto gap-4">
-        <p className="text-4xl font-black ">Trending Now</p>
+        <p className="text-4xl font-black">Trending Now</p>
         <div className="flex flex-row gap-4">
           <select className="select select-bordered select-xs xl:select-sm xxl:select-md z-10">
             <option>India</option>
@@ -57,22 +58,25 @@ const Netflix = () => {
             <option>TV-Series</option>
           </select>
         </div>
-        <div className="carousel carousel-center rounded-box w-full space-x-6 p-4">
+        <div className="carousel carousel-center rounded-box w-full space-x-6 p-4 bg-neutral">
           {range(10).map((idx) => (
             <div
               key={idx}
-              className="carousel-item hover:scale-105 transition-all"
+              className="carousel-item hover:scale-105 transition-all relative"
             >
               <img
                 alt={"movie-" + idx}
-                src={`https://picsum.photos/seed/${idx * 20}/300/450`}
+                src={`https://picsum.photos/seed/${idx * 20}/250/350`}
                 className="rounded-box"
               />
+              <p className="absolute text-9xl text-neutral font-black bottom-0 left-0 netflix-rating">
+                {idx + 1}
+              </p>
             </div>
           ))}
         </div>
-
-        <p className="text-5xl font-black text-center">Todo</p>
+        <NetflixReasons />
+        <p className="text-5xl font-black text-center my-12 pt-12">Todo</p>
       </div>
     </div>
   );

@@ -17,3 +17,7 @@
 .resp-btn {
   @apply btn-xs xl:btn-sm xxl:btn-md;
 }
+
+.netflix-rating {
+  -webkit-text-stroke: 2px oklch(var(--nc));
+}

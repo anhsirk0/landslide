@@ -1,7 +1,7 @@
 import { FC, Fragment, useState, useEffect } from "react";
 
 // icons imports
-import { IconArrowDown } from "@tabler/icons-react";
+import { IconAdjustmentsHorizontal } from "@tabler/icons-react";
 
 // other imports
 import { Link, useLocation } from "react-router-dom";
@@ -19,36 +19,24 @@ const OptionsBar: FC = () => {
   }, [location]);
 
   return (
-    <Fragment>
-      <button
-        onClick={() => setOpen(!open)}
-        className={cn(
-          "fixed rounded-btn bg-accent left-[50vw] h-10 w-10 rotate-45 transition-all ease-in-out duration-300 z-50 center",
-          open ? "bottom-10" : "-bottom-6",
-        )}
-      >
+    <div
+      className={cn(
+        "fixed right-0 bottom-0 p-4 h-24 transition-all ease-in-out duration-300",
+        open ? "w-full" : "w-24",
+      )}
+    >
+      <div className="rounded-box bg-accent w-full overflow-hidden center flex-row p-2">
         {open && (
-          <IconArrowDown className="text-accent-content -rotate-45" size={28} />
-        )}
-      </button>
-      <div
-        className={cn(
-          "transition-all ease-in-out duration-300 fixed w-screen bg-accent",
-          open ? "bottom-0" : "-bottom-16",
-        )}
-      >
-        <div className="w-full h-16 flex flex-row">
-          <div className="navbar">
-            <div className="navbar-start">
-              <Link
-                to="/"
-                className="btn btn-sm xxl:btn-md btn-primary option-btn xxl:text-xl"
-              >
-                <Logo className="fill-primary-content" />
-                Landslides
-              </Link>
-            </div>
-            <div className="navbar-end space-x-4">
+          <Fragment>
+            <Link
+              to="/"
+              className="btn btn-sm rounded-btn xxl:btn-md btn-primary option-btn xxl:text-xl"
+            >
+              <Logo className="fill-primary-content" />
+              Landslides
+            </Link>
+            <div className="grow"></div>
+            <div className="space-x-4">
               <a
                 href="https://github.com/anhsirk0/landslides"
                 target="_blank"
@@ -59,10 +47,18 @@ const OptionsBar: FC = () => {
 
               <SelectTheme />
             </div>
-          </div>
-        </div>
+          </Fragment>
+        )}
+        <button
+          onClick={() => setOpen(!open)}
+          className={cn(
+            "btn btn-accent h-full w-12 transition-all ease-in-out duration-300 z-50 center p-0 rounded-none",
+          )}
+        >
+          <IconAdjustmentsHorizontal className="" />
+        </button>
       </div>
-    </Fragment>
+    </div>
   );
 };
 

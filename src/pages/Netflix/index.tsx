@@ -1,5 +1,6 @@
 import { usePageTitle } from "@/hooks";
 import NetflixLogo from "./NetflixLogo";
+import { range } from "@/helpers";
 
 const Netflix = () => {
   usePageTitle("Netflix");
@@ -11,10 +12,11 @@ const Netflix = () => {
           <div className="flex flex-row items-center gap-4 w-full p-6">
             <NetflixLogo className="w-36 fill-primary" />
             <div className="grow"></div>
-            <button className="btn btn-xs xl:btn-sm btn-sm btn-outline">
-              English
-            </button>
-            <button className="btn btn-xs xl:btn-sm btn-sm btn-primary">
+            <select className="select select-bordered select-xs xl:select-sm z-10">
+              <option>English</option>
+              <option>Hindi</option>
+            </select>
+            <button className="btn btn-xs xl:btn-sm btn-primary">
               Sign In
             </button>
           </div>
@@ -38,12 +40,38 @@ const Netflix = () => {
             </div>
           </div>
         </div>
-        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-base-100 via-base-100/60 to-base-100 opacity-95 -z-10"></div>
+        <div className="absolute inset-0 w-full h-full bg-gradient-to-b from-base-100 via-base-100/70 to-base-100 opacity-95 -z-10"></div>
       </div>
       <div className="h-56 relative center -mt-8 overflow-x-hidden">
         <div className="bg-gradient-to-b from-base-100 via-transparent border-t-4 border-primary rounded-t-[200%] absolute top-0 -left-[25%] w-[150%] h-full"></div>
       </div>
-      <div className="flex flex-col pb-40 -mt-36">
+      <div className="flex flex-col pb-40 -mt-36 max-w-7xl mx-auto gap-4">
+        <p className="text-4xl font-black ">Trending Now</p>
+        <div className="flex flex-row gap-4">
+          <select className="select select-bordered select-xs xl:select-sm xxl:select-md z-10">
+            <option>India</option>
+            <option>Global</option>
+          </select>
+          <select className="select select-bordered select-xs xl:select-sm xxl:select-md z-10">
+            <option>Movies</option>
+            <option>TV-Series</option>
+          </select>
+        </div>
+        <div className="carousel carousel-center rounded-box w-full space-x-6 p-4">
+          {range(10).map((idx) => (
+            <div
+              key={idx}
+              className="carousel-item hover:scale-105 transition-all"
+            >
+              <img
+                alt={"movie-" + idx}
+                src={`https://picsum.photos/seed/${idx * 20}/300/450`}
+                className="rounded-box"
+              />
+            </div>
+          ))}
+        </div>
+
         <p className="text-5xl font-black text-center">Todo</p>
       </div>
     </div>

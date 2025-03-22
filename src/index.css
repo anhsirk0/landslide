@@ -1,6 +1,44 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Manrope", "Open Sans";
+  --font-body: "Manrope", "Open Sans";
+  --font-display: "Manrope", "Open Sans";
+
+  --breakpoint-xs: 30rem;
+  --breakpoint-sm: 40rem;
+  --breakpoint-md: 48rem;
+  --breakpoint-lg: 64rem;
+  --breakpoint-xl: 86rem;
+  --breakpoint-2xl: 96rem;
+
+  --animate-grow: grow 200ms ease-in-out;
+  @keyframes grow {
+    0% {
+      transform: scale(0);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+
+  --animate-appear: appear 200ms ease-in-out;
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    30% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+
+@plugin "daisyui" {
+  themes: all;
+}
 
 @layer base {
   @font-face {
@@ -9,10 +47,8 @@
   }
 }
 
-@layer utilities {
-  .center {
-    @apply flex items-center justify-center;
-  }
+@utility center {
+  @apply flex items-center justify-center;
 }
 
 html {
@@ -23,27 +59,27 @@ html {
 }
 
 #root {
-  @apply center h-screen w-screen min-h-0 transitional overflow-x-hidden;
+  @apply flex items-center justify-center h-screen w-screen min-h-[0] transition-all duration-300 overflow-x-hidden;
 }
 
 .resp-title {
-  @apply text-sm xl:text-base xxl:text-lg font-bold;
+  @apply text-sm xl:text-base 2xl:text-lg font-bold;
 }
 
 .resp-text {
-  @apply text-sm md:text-base xxl:text-xl;
+  @apply text-sm md:text-base 2xl:text-xl;
 }
 
 .resp-gap {
-  @apply gap-2 xxl:gap-4;
+  @apply gap-2 2xl:gap-4;
 }
 
 .resp-btn {
-  @apply btn-xs xl:btn-sm xxl:btn-md;
+  @apply btn-xs xl:btn-sm 2xl:btn-md;
 }
 
 .resp-icon {
-  @apply size-4 xxl:size-6;
+  @apply size-4 2xl:size-6;
 }
 
 .netflix-rating {
@@ -55,20 +91,18 @@ html {
 }
 
 .route-card {
-  @apply size-full center p-4 xxl:p-6 text-2xl md:text-3xl font-semibold;
+  @apply size-full flex items-center justify-center p-4 2xl:p-6 text-2xl md:text-3xl font-semibold;
 }
 
 /* Bluesky specific */
 #bluesky {
   --content-width: 40rem;
-  @layer utilities {
-    .bluesky-content {
-      min-width: var(--content-width);
-      width: var(--content-width);
-    }
-    .bluesky-panel {
-      max-width: calc((100vw - var(--content-width)) / 2);
-      width: calc((100vw - var(--content-width)) / 2);
-    }
-  }
+}
+@utility bluesky-content {
+  min-width: var(--content-width);
+  width: var(--content-width);
+}
+@utility bluesky-panel {
+  max-width: calc((100vw - var(--content-width)) / 2);
+  width: calc((100vw - var(--content-width)) / 2);
 }

@@ -43,7 +43,7 @@ let make = () => {
       </div>
       <div className="divider -my-2" />
       <div className="flex gap-2 items-center">
-        <div className="avatar placeholder">
+        <div className="avatar avatar-placeholder">
           <div className="size-12 rounded-full p-1 bg-neutral text-neutral-content text-2xl">
             {item.author->String.charAt(0)->React.string}
           </div>
@@ -161,10 +161,10 @@ let make = () => {
             {"Discover free and easy ways to find a great hire, fast."->React.string}
           </p>
           <div className="flex gap-4 mx-auto mt-2">
-            <button className="btn btn-sm btn-primary btn-outline btn-wide">
+            <button className="btn btn-sm btn-primary btn-outline">
               {"Yes, I'm hiring"->React.string}
             </button>
-            <button className="btn btn-sm btn-primary btn-outline btn-wide">
+            <button className="btn btn-sm btn-primary btn-outline">
               {"No, not right now"->React.string}
             </button>
           </div>
@@ -180,7 +180,7 @@ let make = () => {
                 />
               </div>
             </div>
-            <input placeholder="Start a post" className="input input-bordered w-full" />
+            <input placeholder="Start a post" className="input w-full" />
           </div>
           <div className="flex items-center justify-between gap-4">
             <button className="btn btn-ghost">

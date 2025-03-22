@@ -24,7 +24,7 @@ let make = () => {
         <Icon.dotsNine className="resp-icon" weight="bold" />
       </button>
       <div className="avatar">
-        <div className="size-8 xxl:size-10 rounded-full">
+        <div className="size-8 2xl:size-10 rounded-full">
           <img
             alt="user"
             src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"

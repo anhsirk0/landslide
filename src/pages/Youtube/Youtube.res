@@ -32,7 +32,7 @@ let make = () => {
         {idx == 5
           ? <Icon.caretDown className="resp-icon mr-2" />
           : <div className="avatar">
-              <div className="w-6 xxl:w-8 rounded-full">
+              <div className="w-6 2xl:w-8 rounded-full">
                 <img
                   alt="user"
                   src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -57,9 +57,9 @@ let make = () => {
         className="rounded-box bg-neutral w-full h-[240px]"
         src={`https://picsum.photos/seed/${(idx * 10)->Int.toString}/400/240`}
       />
-      <div className="flex gap-2 xxl:gap-4">
+      <div className="flex gap-2 2xl:gap-4">
         <div className="avatar">
-          <div className="size-8 xxl:size-12 rounded-full">
+          <div className="size-8 2xl:size-12 rounded-full">
             <img
               alt="user"
               src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
@@ -71,10 +71,10 @@ let make = () => {
           <p className="resp-title -mt-1">
             {`Clickbait title ${idx->Int.toString}`->React.string}
           </p>
-          <p className="text-xs xl:text-sm xxl:text-base text-base-content/80">
+          <p className="text-xs xl:text-sm 2xl:text-base text-base-content/80">
             {"Channel"->React.string}
           </p>
-          <p className="text-xs xl:text-sm xxl:text-base text-base-content/80 -mt-1">
+          <p className="text-xs xl:text-sm 2xl:text-base text-base-content/80 -mt-1">
             {"1B views • 1 hour ago"->React.string}
           </p>
         </div>
@@ -94,30 +94,29 @@ let make = () => {
           <h1 className="resp-text font-bold"> {"YouTube"->React.string} </h1>
         </div>
         <div className="grow" />
-        <div className="hidden lg:flex join items-center self-center py-2 px-4 xxl:px-16 w-1/2">
+        <div className="hidden lg:flex join items-center self-center py-2 px-4 2xl:px-16 w-1/2">
           <label
-            id="search"
-            className="input input-bordered input-sm xxl:input-md flex items-center join-item grow">
+            id="search" className="input input-sm 2xl:input-md flex items-center join-item grow">
             <input placeholder="Search" className="grow" />
           </label>
           <button
-            className="btn btn-sm xxl:btn-md join-item no-animation border border-base-content/20">
+            className="btn btn-sm 2xl:btn-md join-item no-animation border border-base-content/20">
             <Icon.magnifyingGlass className="resp-icon" />
           </button>
         </div>
         <div className="flex items-center w-1/4 justify-end">
-          <button className="btn btn-sm xxl:btn-md">
+          <button className="btn btn-sm 2xl:btn-md">
             <Icon.plus className="resp-icon" />
             {"Create"->React.string}
           </button>
           <button className="btn btn-square btn-ghost resp-btn relative">
             <Icon.bell className="size-6" />
             <span
-              className="size-2 xxl:size-3 rounded-full bg-primary absolute right-0.5 top-0 xxl:right-2 xxl:top-2"
+              className="size-2 2xl:size-3 rounded-full bg-primary absolute right-0.5 top-0 2xl:right-2 2xl:top-2"
             />
           </button>
-          <div className="avatar ml-6 xxl:mr-6">
-            <div className="w-8 xxl:w-12 rounded-full">
+          <div className="avatar ml-6 2xl:mr-6">
+            <div className="w-8 2xl:w-12 rounded-full">
               <img
                 src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
               />
@@ -139,18 +138,18 @@ let make = () => {
           <Icon.youtube className="size-8 lg:size-10 text-primary" weight="fill" />
           <h1 className="resp-text font-bold"> {"YouTube"->React.string} </h1>
         </div>
-        <ul className="menu menu-sm xxl:menu-lg"> {sidelinks->React.array} </ul>
+        <ul className="menu 2xl:menu-lg w-full"> {sidelinks->React.array} </ul>
         <div className="divider -my-1" />
         <button className="btn btn-ghost resp-btn justify-start -mb-2">
-          <p className="ml-2 xxl:ml-4"> {"You"->React.string} </p>
+          <p className="ml-2 2xl:ml-4"> {"You"->React.string} </p>
           <Icon.caretRight className="size-4" />
         </button>
-        <ul className="menu menu-sm xxl:menu-lg"> {youlinks->React.array} </ul>
+        <ul className="menu 2xl:menu-lg w-full"> {youlinks->React.array} </ul>
         <div className="divider -my-1" />
         <button className="btn btn-ghost resp-btn justify-start -mb-2">
-          <p className="ml-2 xxl:ml-4"> {"Subscriptions"->React.string} </p>
+          <p className="ml-2 2xl:ml-4"> {"Subscriptions"->React.string} </p>
         </button>
-        <ul className="menu menu-sm xxl:menu-lg"> {subs->React.array} </ul>
+        <ul className="menu 2xl:menu-lg w-full"> {subs->React.array} </ul>
       </div>
     </div>
   </div>

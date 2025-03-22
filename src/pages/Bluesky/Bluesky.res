@@ -16,7 +16,7 @@ let make = () => {
     let borderTop = idx == 0 ? "" : "border-t border-base-content/20"
 
     <div className={`flex flex-row gap-4 p-4 w-full ${borderTop}`} key={idx->Int.toString}>
-      <div className="avatar placeholder size-12">
+      <div className="avatar avatar-placeholder size-12">
         <div className="w-full rounded-full bg-neutral text-neutral-content text-xl font-bold">
           {item.name->Utils.toAvatar->React.string}
         </div>

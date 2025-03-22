@@ -14,11 +14,11 @@ let make = () => {
 
   let otherlinks = Shape.Spotify.otherlinks->Array.mapWithIndex((links, idx) => {
     let innerLinks = links->Array.map(link => {
-      <p key={link} className="link link-hover text-xs xxl:text-sm text-base-content/70">
+      <p key={link} className="link link-hover text-xs 2xl:text-sm text-base-content/70">
         {link->React.string}
       </p>
     })
-    <div key={idx->Int.toString} className="flex flex-row gap-5 mb-2 xxl:mb-4">
+    <div key={idx->Int.toString} className="flex flex-row gap-5 mb-2 2xl:mb-4">
       {innerLinks->React.array}
     </div>
   })
@@ -27,7 +27,7 @@ let make = () => {
     let cards = Belt.Array.range(1, 5)->Array.map(idx => {
       <div
         key={idx->Int.toString}
-        className="flex flex-col w-[48%] lg:w-auto rounded-box p-2 xxl:p-4 hover:bg-base-300 transition-all ease-in-out duration-300 gap-2 group">
+        className="flex flex-col w-[48%] lg:w-auto rounded-box p-2 2xl:p-4 hover:bg-base-300 transition-all ease-in-out duration-300 gap-2 group">
         <div className="relative [&>img]:bg-neutral/50">
           <img
             // alt={"artist-" ++ idx->Int.toString}
@@ -42,7 +42,7 @@ let make = () => {
           </button>
         </div>
         <p className="resp-title"> {`Artist ${idx->Int.toString}`->React.string} </p>
-        <p className="text-xs xl:text-sm xxl:text-base -mt-2"> {cat->React.string} </p>
+        <p className="text-xs xl:text-sm 2xl:text-base -mt-2"> {cat->React.string} </p>
       </div>
     })
 
@@ -63,11 +63,12 @@ let make = () => {
           <Icon.spotify className="size-8" />
         </label>
         <div className="grow" />
-        <div className="flex resp-gap hidden sm:flex w-1/2 xxl:w-1/3">
-          <button className="btn btn-square">
+        <div className="flex resp-gap hidden sm:flex w-1/2 2xl:w-1/3">
+          <button className="btn 2xl:btn-lg btn-square">
             <Icon.house className="resp-icon" weight="fill" />
           </button>
-          <label className="input bg-base-200 flex items-center gap-2 grow">
+          <label
+            className="input input-ghost 2xl:input-lg bg-base-200 flex items-center gap-2 grow">
             <Icon.magnifyingGlass className="resp-icon" />
             <input className="grow" placeholder="What do you want to play?" />
           </label>
@@ -86,16 +87,16 @@ let make = () => {
       <div className="h-full lg:p-2">
         <div className="flex flex-col lg:rounded-box bg-base-100 lg:bg-base-200 p-4 h-full">
           <div className="flex flex-row justify-between">
-            <div className="flex flex-row gap-2 text-sm xxl:text-base">
+            <div className="flex flex-row gap-2 text-sm 2xl:text-base">
               <Icon.playlist className="resp-icon" />
               {"Library"->React.string}
             </div>
             <Icon.plus className="resp-icon" />
           </div>
-          <div className="card card-compact bg-base-300 mt-6 xxl:mt-16">
+          <div className="card card-compact bg-base-300 mt-6 2xl:mt-16">
             <div className="card-body">
               <p className="resp-title"> {"Create your first playlist"->React.string} </p>
-              <p className="text-xs xl:text-sm xxl:text-base pb-4">
+              <p className="text-xs xl:text-sm 2xl:text-base pb-4">
                 {"Its easy, we'll help you"->React.string}
               </p>
               <div className="card-actions">
@@ -105,10 +106,10 @@ let make = () => {
               </div>
             </div>
           </div>
-          <div className="card card-compact bg-base-300 mt-6 xxl:mt-8">
+          <div className="card card-compact bg-base-300 mt-6 2xl:mt-8">
             <div className="card-body">
               <p className="resp-title"> {"Let's find some podcasts to follow"->React.string} </p>
-              <p className="text-xs xl:text-sm xxl:text-base pb-4">
+              <p className="text-xs xl:text-sm 2xl:text-base pb-4">
                 {"We'll keep you updated on new episodes"->React.string}
               </p>
               <div className="card-actions">
@@ -120,7 +121,7 @@ let make = () => {
           </div>
           <div className="grow" />
           {otherlinks->React.array}
-          <button className="btn resp-btn btn-outline w-fit my-2 xxl:my-8">
+          <button className="btn resp-btn btn-outline w-fit my-2 2xl:my-8">
             <Icon.globe className="resp-icon" />
             {"English"->React.string}
           </button>

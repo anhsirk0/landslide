@@ -32,4 +32,7 @@ let themes = [
   "dim",
   "nord",
   "sunset",
+  "caramellatte",
+  "abyss",
+  "silk",
 ]

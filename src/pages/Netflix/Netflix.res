@@ -31,12 +31,12 @@ let make = () => {
   let reasons = Shape.Netflix.Reason.all->Array.map(item => {
     <div
       key=item.title
-      className="card card-compact xxl:card-normal bg-gradient-to-br from-primary/30 to-accent/30 md:flex-1">
+      className="card card-compact 2xl:card-normal bg-gradient-to-br from-primary/30 to-accent/30 md:flex-1">
       <div className="card-body">
         <p className="card-title"> {item.title->React.string} </p>
-        <p className="text-xs xl:text-sm xxl:text-base pb-4"> {item.content->React.string} </p>
+        <p className="text-xs xl:text-sm 2xl:text-base pb-4"> {item.content->React.string} </p>
         <div className="card-actions justify-end">
-          {React.createElement(item.icon, {className: "size-8 xxl:size-12 text-primary"})}
+          {React.createElement(item.icon, {className: "size-8 2xl:size-12 text-primary"})}
         </div>
       </div>
     </div>
@@ -54,7 +54,7 @@ let make = () => {
   })
 
   <div className="w-full h-full">
-    <div className="h-[90vh] bg-netflix relative isolate">
+    <div className="h-[90vh] bg-[url(/src/assets/netflix-bg.jpg)] relative isolate">
       <div className="flex flex-col max-w-7xl mx-auto h-full">
         <div className="flex flex-row items-center gap-4 w-full p-6">
           <Icon.netflix className="w-36 fill-primary" />
@@ -65,7 +65,7 @@ let make = () => {
           </select>
           <button className="btn btn-xs xl:btn-sm btn-primary"> {"Sign In"->React.string} </button>
         </div>
-        <div className="grow center -mt-16 xxl:-mt-32 flex-col gap-6 px-4">
+        <div className="grow center -mt-16 2xl:-mt-32 flex-col gap-6 px-4">
           <p className="text-4xl md:text-6xl font-black px-56 text-center">
             {"Unlimited movies, TV shows and more"->React.string}
           </p>
@@ -77,7 +77,7 @@ let make = () => {
               membership."->React.string}
           </p>
           <div className="join md:w-96 mx-auto">
-            <input className="input input-bordered join-item grow" placeholder="Email address" />
+            <input className="input join-item grow" placeholder="Email address" />
             <button className="btn btn-primary join-item"> {"Subscribe"->React.string} </button>
           </div>
         </div>
@@ -94,11 +94,11 @@ let make = () => {
     <div className="flex flex-col pb-40 -mt-36 max-w-7xl mx-auto gap-4 px-4">
       <p className="text-2xl md:text-4xl font-black"> {"Trending Now"->React.string} </p>
       <div className="flex flex-row gap-4">
-        <select className="select select-bordered select-xs xl:select-sm xxl:select-md z-10">
+        <select className="select select-bordered select-xs xl:select-sm 2xl:select-md z-10">
           <option> {"India"->React.string} </option>
           <option> {"Global"->React.string} </option>
         </select>
-        <select className="select select-bordered select-xs xl:select-sm xxl:select-md z-10">
+        <select className="select select-bordered select-xs xl:select-sm 2xl:select-md z-10">
           <option> {"Movies"->React.string} </option>
           <option> {"TV-Series"->React.string} </option>
         </select>
@@ -107,20 +107,20 @@ let make = () => {
         className="carousel carousel-center rounded-box w-full space-x-6 p-4 bg-neutral h-56 md:h-auto">
         {trendings->React.array}
       </div>
-      <p className="text-2xl md:text-4xl font-medium mt-8 xxl:mt-12">
+      <p className="text-2xl md:text-4xl font-medium mt-8 2xl:mt-12">
         {"More reasons to join"->React.string}
       </p>
       <div className="flex flex-col md:flex-row gap-4"> {reasons->React.array} </div>
-      <p className="text-2xl md:text-4xl font-medium mt-8 xxl:mt-12">
+      <p className="text-2xl md:text-4xl font-medium mt-8 2xl:mt-12">
         {"Frequently Asked Questions"->React.string}
       </p>
       <div className="flex flex-col gap-4"> {faqs->React.array} </div>
-      <div className="flex flex-col gap-2 xxl:gap-4 mt-8 xxl:mt-12 px-4">
+      <div className="flex flex-col gap-2 2xl:gap-4 mt-8 2xl:mt-12 px-4">
         <p className="text-sm md:text-lg font-medium text-center">
           {"Ready to watch? Enter your email to create or restart your membership."->React.string}
         </p>
-        <div className="join grow lg:px-20 xxl:px-40">
-          <input className="input input-bordered join-item grow" placeholder="Email address" />
+        <div className="join grow lg:px-20 2xl:px-40">
+          <input className="input join-item grow" placeholder="Email address" />
           <button className="btn btn-primary join-item"> {"Subscribe"->React.string} </button>
         </div>
       </div>
